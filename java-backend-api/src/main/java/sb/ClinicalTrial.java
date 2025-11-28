@@ -5,13 +5,22 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
+//import org.springframework.web.bind.annotation.*;
+//import javax.persistence.Entity;
+//import javax.persistence.Column;
+//import javax.persistence.Id;
+
+//@Entity
+//cannot find symbol: class Entity
 
 public class ClinicalTrial implements Serializable {
 
     private static final long serialVersionUID = -7788619177798333712L;
-
+	//@Id
     private String nctId;
+    //@Column
     private String officialTitle;
+    //@Column
     private String phase;
 
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", timezone="GMT")
